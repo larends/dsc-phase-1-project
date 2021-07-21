@@ -1,65 +1,137 @@
-# Phase 1 Project
+# Ensuring Success for Microsoft Movie Studios
 
-You've made it all the way through the first phase of this course - take a minute to celebrate your awesomeness!
+<img src='Images/film-2233656_1920.jpg' width = "400">
 
-![awesome](https://raw.githubusercontent.com/learn-co-curriculum/dsc-phase-1-project/master/awesome.gif)
 
-Now you will put your new skills to use with a large end-of-Phase project! This project should take 20 to 30 hours to complete.
+## Business Problem
 
-## Project Overview
+What types of movies should Microsoft Movie Studios make in order to maximize the return on investment?
 
-For this project, you will use exploratory data analysis to generate insights for a business stakeholder.
+<img src='Images/ROI.png' width = "400" >
 
-### Business Problem
 
-Microsoft sees all the big companies creating original video content and they want to get in on the fun. They have decided to create a new movie studio, but they don’t know anything about creating movies. You are charged with exploring what types of films are currently doing the best at the box office. You must then translate those findings into actionable insights that the head of Microsoft's new movie studio can use to help decide what type of films to create.
+## Business Value
 
-### The Data
+A significant amount of time and money goes into the production of a movie. These resources are best allocated to the movie genres, crew and markets that are associated with a greater return on investment (ROI) in terms of box-office revenue. By focusing on creating and releasing movies that have a greater chance of being financially successful, Microsoft Movie Studios can maximize profits.
 
-In the folder `zippedData` are movie datasets from:
+## Questions to Investigate
 
-* [Box Office Mojo](https://www.boxofficemojo.com/)
-* [IMDB](https://www.imdb.com/)
-* [Rotten Tomatoes](https://www.rottentomatoes.com/)
-* [TheMovieDB](https://www.themoviedb.org/)
-* [The Numbers](https://www.the-numbers.com/)
+- Which movie genres have the highest ROI?
+- Do movies released at a certain time of year have a higher ROI?
+- What directors and producers have demonstrated profitability?
+- Do movies that are part of a franchise have a higher gross?
+- What external markets can increase profits?
 
-It is up to you to decide what data from this to use and how to use it. If you want to make this more challenging, you can scrape websites or make API calls to get additional data. If you are feeling overwhelmed or behind (e.g. struggled with the Phase 1 Code Challenge), we recommend you use only the following data files:
+## Methodology
 
-* imdb.title.basics
-* imdb.title.ratings
-* bom.movie_gross
+- Analyze box-office data on released movies
+- Look for characteristics of movies with a high ROI
+- Make data-driven recommendations to create high-ROI movies
 
-## Deliverables
+## Findings
 
-There are three deliverables for this project:
+### Genre
 
-* A **GitHub repository**
-* A **Jupyter Notebook**
-* A **non-technical presentation**
+#### Mystery, horror, animation, science fiction and adventure all have a greater ROI than the median.
 
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic for instructions on creating and submitting your deliverables. Refer to the rubric associated with this assignment for specifications describing high-quality deliverables.
+Adventure movies are by far the most popular, with about double the number released each year compared to the other top genres. This genre has a consistent ROI of around 250%, which is about average. However, they are also the most expensive to produce, which introduces an element of risk.
 
-### Key Points
+Mystery has a 38% improvement on ROI, but popularity trends suggest that it may be losing interest for viewers.
 
-* **Your analysis should yield three concrete business recommendations.** The ultimate purpose of exploratory analysis is not just to learn about the data, but to help an organization perform better. Explicitly relate your findings to business needs by recommending actions that you think the business (Microsoft) should take.
+Horror and science fiction have a high ROI (27% and 16% improvements, respectively) and seem to be increasing in both popularity and profitability. Science fiction is expensive to create, while horror has extremely low production costs.
 
-* **Communicating about your work well is extremely important.** Your ability to provide value to an organization - or to land a job there - is directly reliant on your ability to communicate with them about what you have done and why it is valuable. Create a storyline your audience (the head of Microsoft's new movie studio) can follow by walking them through the steps of your process, highlighting the most important points and skipping over the rest.
+Animation is a consistent performer (about 23% improvement on baseline ROI), but is also expensive to produce.
 
-* **Use plenty of visualizations.** Visualizations are invaluable for exploring your data and making your findings accessible to a non-technical audience. Spotlight visuals in your presentation, but only ones that relate directly to your recommendations. Simple visuals are usually best (e.g. bar charts and line graphs), and don't forget to format them well (e.g. labels, titles).
+<img src='Images/change%20from%20baseline%20genre.png' width="400">
 
-## Getting Started
+####  Adventure movies are the most popular.
 
-Please start by reviewing this assignment, the rubric at the bottom of it, and the "Project Submission & Review" page. If you have any questions, please ask your instructor ASAP.
+<img src='Images/genre%20over%20time.png' width = "400">
 
-Next, we recommend you check out [the Phase 1 Project Templates and Examples repo](https://github.com/learn-co-curriculum/dsc-project-template) and use the MVP template for your project.
+#### Adventure movies are expensive to make & horror movies have among the lowest production budgets.
 
-Alternatively, you can fork [the Phase 1 Project Repository](https://github.com/learn-co-curriculum/dsc-phase-1-project), clone it locally, and work in the `student.ipynb` file. Make sure to also add and commit a PDF of your presentation to your repository with a file name of `presentation.pdf`.
+<img src='Images/budget%20by%20genre.png' width="400">
 
-## Project Submission and Review
+### Season of Release
 
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic to learn how to submit your project and how it will be reviewed. Your project must pass review for you to progress to the next Phase.
 
-## Summary
+#### Movies released in the summer have the greatest ROI.
 
-This project will give you a valuable opportunity to develop your data science skills using real-world data. The end-of-phase projects are a critical part of the program because they give you a chance to bring together all the skills you've learned, apply them to realistic projects for a business stakeholder, practice communication skills, and get feedback to help you improve. You've got this!
+<img src='Images/roi%20by%20season.png' width ="400">
+
+The movies with the highest ROI are released in in the summer, with the three other seasons being approximately equal, giving credence to the idea of a "summer blockbuster."
+
+#### Horror ROI peaks in the fall and science fiction peaks in the winter.
+
+<img src='Images/season%20by%20genre.png' width = "400">
+
+### Directors & Producers
+
+We all know that the "big name" actors tend to draw a crowd, but they also draw a big paycheck. I am going to look instead at the directors and producers that have been linked to highly profitable movies.
+
+#### Certain directors are both prolific, meaning they have made many movies, and profitable, meaning their movies had a high ROI.
+
+<img src='Images/director%20profit.png' width="400">
+<img src='Images/directors%20movies.png' width="400">
+
+The two directors with the extremely high ROI both worked on The Gallows, a very low-budget horror movie that happened to do extremely well at the box office. This type of return cannot be expected again.
+
+Jordan Peele and William Brent Bell are both prolific and profitable, making them wise choices for movie production.
+     
+#### Some producers are associated with high ROI movies.
+
+<img src='Images/producers.png' width="400">
+
+### Franchises 
+
+#### Most high-budget films that have a high ROI are part of a franchise. 
+
+By observation - and life experience - it is clear that many of the most profitable movies are part of a franchise.
+
+<img src='Images/franchises.png' width="800">
+
+The graph shows that most of the big-budget, big profit movies are indeed part of franchise. 
+
+### Global Markets
+
+#### Brazil, Russia, Germany & Spain are high consumers of American-made movies.
+
+One of the ways that a movie can make more profit is by exporting it to other markets with slight modifications. The following are the top markets for American-made movies in the top 20% of ROI.
+
+<img src='Images/global%20markets.png' width = "800">
+
+
+## Recommendations
+
+### Focus production on movies in the adventure, horror and science fiction genres because they have a high ROI and are popular. If budget is limited, emphasize horror movies, as they have a higher return than average and a much lower production cost.
+
+### Focus on summer releases, especially for big-budget adventure movies because summer has the overall highest ROI and is when the ROI for adventure peaks. Release horror movies in the fall and science fiction in the winter to coincide with their best ROI.
+
+### Create opportunities to hire Jordan Peele or William Brent Bell as directors because they are popular and have directed movies with a high ROI. Consider Dean Schnider, Guymon Casady or Benjamin Forker as producers since they have produced profitable movies.
+
+### Look for opportunities for movie franchises, especially for big-budget productions.
+
+### Customize high-performing movies for the following global markets: Brazil, Russia, Germany & Spain.
+
+
+
+
+## Future Work
+
+- Streaming has become increasing popular and has dramatically altered the movie environment. Further research into streaming markets to determine what movies are most profitable in that domain would be highly beneficial.
+
+- Examine data from 2020-2021 to see the impact that Covid had on movie trends, as some of these may have a lasting impact on the market.
+
+- Obtain more thorough data on the expenses in movie production in order to calculate more accurate ROI statistics.
+
+
+
+
+```python
+
+```
+
+
+```python
+
+```
